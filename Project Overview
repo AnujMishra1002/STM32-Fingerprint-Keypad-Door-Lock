@@ -1,0 +1,19 @@
+Goal: Build a secure door lock that uses a fingerprint sensor as the primary authentication method and a 4×4 keypad as a backup (PIN). Unlocks a solenoid/relay or motor driver (L293D) on successful authentication. Stores users in internal flash (or external EEPROM) and logs events to an SD card (optional).
+
+Microcontroller: STM32F103C8 ("Blue Pill") or STM32F401 / STM32F411 (any STM32 with enough UARTs and GPIOs).
+
+Key features
+
+Fingerprint module (R305/R307/GT-521F/Optical) via UART
+
+4×4 matrix keypad input
+
+OLED/LCD status display (optional) via I2C/SPI
+
+Door actuator control via relay or L293D motor driver using PWM
+
+Store fingerprint template IDs and PINs in internal flash
+
+Admin mode: add/remove users via keypad + fingerprint
+
+Optional: Log events to SD card (FATFS) and realtime clock (RTC)
